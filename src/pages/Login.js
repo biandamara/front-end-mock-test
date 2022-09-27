@@ -1,6 +1,3 @@
-// import { Axios } from "axios";
-// import { useEffect } from "react";
-
 // import components
 import Navigation from "../component/Navigation";
 
@@ -8,12 +5,6 @@ import Navigation from "../component/Navigation";
 import styles from "../assets/styles/Login.module.css";
 
 function Login() {
-  // useEffect(() => {
-  //   Axios.get("https://test-binar.herokuapp.com/")
-  //     .then((res) => console.log(res.data))
-  //     .catch((err) => console.log(err));
-  // }, []);
-
   return (
     <>
       <Navigation />
@@ -28,10 +19,10 @@ function Login() {
           <div className={`${styles.box}`}>
             <div className={`${styles.form}`}>
               <form>
-                <input placeholder="E-mail" type="email" />
+                <input id="email" type="email" placeholder="E-mail" />
               </form>
               <form>
-                <input placeholder="Password" type="password" />
+                <input id="password" type="password" placeholder="Password" />
               </form>
               <button>Login</button>
             </div>

@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 // import components
 import Navigation from "../component/Navigation";
 
@@ -7,7 +9,10 @@ import styles from "../assets/styles/Dashboard.module.css";
 function Dashboard() {
   return (
     <>
+      {/* <Navigation /> */}
       <Navigation />
+      {/* navigation bar - end */}
+
       {/* container dashboard page - start */}
       <div className={`container ${styles.page}`}>
         <h1>Dashboard</h1>
