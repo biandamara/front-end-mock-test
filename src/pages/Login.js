@@ -9,7 +9,7 @@ import styles from "../assets/styles/Login.module.css";
 
 function Login() {
   // useEffect(() => {
-  //   Axios.get("https://test-binar.herokuapp.com")
+  //   Axios.get("https://test-binar.herokuapp.com/")
   //     .then((res) => console.log(res.data))
   //     .catch((err) => console.log(err));
   // }, []);
