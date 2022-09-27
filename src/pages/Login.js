@@ -40,7 +40,7 @@ function Login() {
 
           {/* to register - start */}
           <p>
-            Don't have an account? <a href="/Register">Register</a>
+            Don't have an account? <a href="/register">Register</a>
           </p>
           {/* to register - end */}
         </div>
