@@ -5,6 +5,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import routes
 
 import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
 
 // impot styles
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -15,6 +17,8 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/Login" element={<Login />} />
+      <Route path="/Register" element={<Register />} />
     </Routes>
   </BrowserRouter>
 );

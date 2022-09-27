@@ -2,19 +2,19 @@
 import Navigation from "../component/Navigation";
 
 // import styles
-import styles from "../assets/styles/Home.module.css";
+import styles from "../assets/styles/Login.module.css";
 
-function Home() {
+function Login() {
   return (
     <>
       <Navigation />
-      {/* container home page - start */}
+      {/* container login page - start */}
       <div className={`container ${styles.page}`}>
-        <h1>Home</h1>
+        <h1>Login</h1>
       </div>
-      {/* container home page - end */}
+      {/* container login page - end */}
     </>
   );
 }
 
-export default Home;
+export default Login;
