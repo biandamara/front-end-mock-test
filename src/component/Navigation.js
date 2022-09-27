@@ -1,5 +1,3 @@
-import { NavLink } from "react-router-dom";
-
 // import styles
 import styles from "../assets/styles/Navigation.module.css";
 
@@ -7,33 +5,19 @@ function Navigation() {
   return (
     <>
       {/* navigation bar - start */}
-      <nav className={`navbar navbar-expand-sm ${styles.navigation}`}>
-        {/* navigation menus - start */}
-        <div className={`${styles.menu}`}>
-          <ul className="navbar-nav text-center">
-            <li>
-              <NavLink className="nav-link" to="/">
-                Home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink className="nav-link" to="/dashboard">
-                Dashboard
-              </NavLink>
-            </li>
-            <li>
-              <NavLink className="nav-link" to="/login">
-                Login
-              </NavLink>
-            </li>
-            <li>
-              <NavLink className="nav-link" to="/register">
-                Register
-              </NavLink>
-            </li>
-          </ul>
+      <nav className={`navbar p-3 ${styles.navigation}`}>
+        {/* title - start */}
+        <div>
+          <h1>Product List</h1>
         </div>
-        {/* navigation menus - end */}
+        {/* title - end */}
+
+        {/* menus - start */}
+        <div className={`container ${styles.menu}`}>
+          <button>Create New</button>
+          <a href="/">Logout</a>
+        </div>
+        {/* menus - end */}
       </nav>
       {/* navigation bar - end */}
     </>

@@ -1,5 +1,13 @@
-.navigation {
+.navigation h1 {
+  font-size: 20px;
+  font-weight: bold;
 }
 
-.menu {
+.menu button {
+  width: 120px;
+  padding: 5px;
+}
+
+.menu a {
+  text-decoration: none;
 }

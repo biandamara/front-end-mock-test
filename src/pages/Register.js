@@ -1,5 +1,5 @@
 // import components
-import Navigation from "../component/Navigation";
+// import Navigation from "../component/Navigation";
 
 // import styles
 import styles from "../assets/styles/Register.module.css";
@@ -7,7 +7,7 @@ import styles from "../assets/styles/Register.module.css";
 function Register() {
   return (
     <>
-      <Navigation />
+      {/* <Navigation /> */}
       {/* container register page - start */}
       <div className={`container ${styles.page}`}>
         <div className={`text-center`}>

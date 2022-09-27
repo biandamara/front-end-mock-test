@@ -1,13 +1,29 @@
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
 // import components
-import Navigation from "../component/Navigation";
+// import Navigation from "../component/Navigation";
 
 // import styles
 import styles from "../assets/styles/Login.module.css";
 
 function Login() {
+  const navigate = useNavigate();
+
+  axios
+    .post(`https://test-binar.herokuapp.com/auth/login`)
+    .then((res) => {
+      console.log(res);
+      localStorage.setItem("token", JSON.stringify(res.data.result));
+      navigate("/dashboard");
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+
   return (
     <>
-      <Navigation />
+      {/* <Navigation /> */}
       {/* container login page - start */}
       <div className={`container ${styles.page}`}>
         <div className={`text-center`}>

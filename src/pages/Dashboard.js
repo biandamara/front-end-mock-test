@@ -1,5 +1,3 @@
-import { NavLink } from "react-router-dom";
-
 // import components
 import Navigation from "../component/Navigation";
 
