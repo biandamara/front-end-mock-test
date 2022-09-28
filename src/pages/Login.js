@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import Swal from "sweetalert2";
 
 // import styles
 import styles from "../assets/styles/Login.module.css";
@@ -16,45 +15,33 @@ function Login() {
     e.preventDefault();
     try {
       if (!email || !password) {
-        Swal.fire({
-          icon: "error",
-          title: "ALERT",
-          text: "Please make sure to fill email and password",
-          confirmButtonColor: "#dc3545",
-        });
+        alert("Can not be empty!");
+        window.location.reload();
         return;
       }
+
       axios
         .post("https://test-binar.herokuapp.com/auth/login", {
           email: email,
           password: password,
         })
-        .then((response) => {
-          console.log("ini adalah", response);
-          if (response.data.message === "ERROR") {
-            Swal.fire({
-              icon: "error",
-              title: "ALERT",
-              text: "User not Registered",
-              confirmButtonColor: "#dc3545",
-            });
+
+        .then((res) => {
+          console.log("ini adalah", res);
+          if (res.data.message === "ERROR") {
+            alert("User not Registered");
           } else {
             localStorage.setItem(
               "token",
-              JSON.stringify(response.data.result.access_token)
+              JSON.stringify(res.data.result.access_token)
             );
-            Swal.fire({
-              icon: "success",
-              title: "WELCOME",
-              text: "Login Success!",
-              confirmButtonColor: "#dc3545",
-            });
+            alert("Login Success!");
             navigate("/dashboard");
           }
         });
     } catch (err) {
-      alert(err.toString());
-      console.log(err);
+      alert("You don't have an account, create your account");
+      window.location.reload();
     }
   };
 
