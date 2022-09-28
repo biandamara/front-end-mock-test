@@ -34,7 +34,7 @@ function Register() {
 
           {/* to register - start */}
           <p>
-            Already have an account? <a href="/">Login</a>
+            Already have an account? <a href="/">Register</a>
           </p>
           {/* to register - end */}
         </div>
