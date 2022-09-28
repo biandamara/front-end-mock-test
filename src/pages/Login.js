@@ -16,7 +16,6 @@ function Login() {
     try {
       if (!email || !password) {
         alert("Can not be empty!");
-        window.location.reload();
         return;
       }
 
@@ -27,7 +26,7 @@ function Login() {
         })
 
         .then((res) => {
-          console.log("ini adalah", res);
+          console.log(res);
           if (res.data.message === "ERROR") {
             alert("User not Registered");
           } else {
