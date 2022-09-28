@@ -16,17 +16,15 @@ function Register() {
     e.preventDefault();
     if (!name || !email || !password) {
       alert("Cannot be empty!");
+      return;
     } else {
       try {
-        const result = await axios.post(
-          "https://team2-chapter11-backend.herokuapp.com/register",
-          {
-            name: name,
-            email: email,
-            password: password,
-          }
-        );
-        alert(result.data.message);
+        axios.post("https://test-binar.herokuapp.com/auth/signup", {
+          name: name,
+          email: email,
+          password: password,
+        });
+        alert("Register Success!");
         navigate("/");
       } catch (err) {
         alert("Your e-mail or username is already in use");
@@ -53,7 +51,7 @@ function Register() {
                   id="name"
                   type="text"
                   placeholder="Name"
-                  value={password}
+                  value={name}
                   onChange={(e) => setName(e.target.value)}
                 />
               </form>
@@ -62,7 +60,7 @@ function Register() {
                   id="email"
                   type="email"
                   placeholder="E-mail"
-                  value={password}
+                  value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
               </form>

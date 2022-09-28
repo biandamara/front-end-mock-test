@@ -15,18 +15,15 @@ function Login() {
     e.preventDefault();
     try {
       if (!email || !password) {
-        alert("Can not be empty!");
+        alert("Cannot be empty!");
         return;
       }
-
       axios
         .post("https://test-binar.herokuapp.com/auth/login", {
           email: email,
           password: password,
         })
-
         .then((res) => {
-          console.log(res);
           if (res.data.message === "ERROR") {
             alert("User not Registered");
           } else {
