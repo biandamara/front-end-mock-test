@@ -5,17 +5,21 @@ function Navigation() {
   return (
     <>
       {/* navigation bar - start */}
-      <nav className={`navbar p-3 ${styles.navigation}`}>
+      <nav className={`row p-3 ${styles.navigation}`}>
         {/* title - start */}
-        <div>
+        <div className={`col-2 ${styles.title}`}>
           <h1>Product List</h1>
         </div>
         {/* title - end */}
 
         {/* menus - start */}
-        <div className={`container ${styles.menu}`}>
-          <button>Create New</button>
-          <a href="/">Logout</a>
+        <div className={`col ${styles.menu}`}>
+          <div>
+            <button>Create New</button>
+          </div>
+          <div>
+            <a href="/">Logout</a>
+          </div>
         </div>
         {/* menus - end */}
       </nav>

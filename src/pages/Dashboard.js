@@ -3,7 +3,7 @@ import Navigation from "../component/Navigation";
 
 // import styles
 import styles from "../assets/styles/Dashboard.module.css";
-
+import Card from "../component/Card";
 function Dashboard() {
   return (
     <>
@@ -13,7 +13,11 @@ function Dashboard() {
 
       {/* container dashboard page - start */}
       <div className={`container ${styles.page}`}>
-        <h1>Dashboard</h1>
+        <div className={`row row-cols-3 row-cols-lg-5 gap-3`}>
+          {/* card - start */}
+          <Card />
+          {/* card - end */}
+        </div>
       </div>
       {/* container dashboard page - end */}
     </>
