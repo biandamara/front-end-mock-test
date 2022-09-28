@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import axios from "axios";
 
 // import components
@@ -9,14 +9,11 @@ import styles from "../assets/styles/Dashboard.module.css";
 import Card from "../component/Card";
 
 function Dashboard() {
-  const [data, setData] = useState([]);
-
   const getProducts = () => {
     axios
       .get("https://test-binar.herokuapp.com/v1/products")
       .then((res) => {
-        setData(res.data.result);
-        console.log(res);
+        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);
