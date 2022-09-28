@@ -27,14 +27,14 @@ function Register() {
               <form>
                 <input placeholder="Password" type="password" />
               </form>
-              <button type="submit">Login</button>
+              <button type="submit">Register</button>
             </div>
           </div>
           {/* form login - end */}
 
           {/* to register - start */}
           <p>
-            Already have an account? <a href="/">Register</a>
+            Already have an account? <a href="/">Login</a>
           </p>
           {/* to register - end */}
         </div>
