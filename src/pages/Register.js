@@ -44,36 +44,51 @@ function Register() {
           {/* title - end */}
 
           {/* form login - start */}
-          <div className={`${styles.box}`}>
-            <div className={`${styles.form}`}>
-              <form>
-                <input
-                  id="name"
-                  type="text"
-                  placeholder="Name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                />
-              </form>
-              <form>
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="E-mail"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </form>
-              <form>
-                <input
-                  id="password"
-                  type="password"
-                  placeholder="Password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-              </form>
-              <button type="button" onClick={handleSubmit}>
+          <div className={`card`}>
+            <div className={`card-body`}>
+              <div class="mb-3">
+                <form>
+                  <input
+                    className="form-control"
+                    id="name"
+                    type="text"
+                    placeholder="Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                </form>
+              </div>
+
+              <div class="mb-3">
+                <form>
+                  <input
+                    className="form-control"
+                    id="email"
+                    type="email"
+                    placeholder="E-mail"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </form>
+              </div>
+
+              <div class="mb-3">
+                <form>
+                  <input
+                    className="form-control"
+                    id="password"
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                </form>
+              </div>
+              <button
+                class="btn btn-primary"
+                type="button"
+                onClick={handleSubmit}
+              >
                 Register
               </button>
             </div>

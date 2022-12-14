@@ -12,26 +12,3 @@
   font-weight: bold;
   padding: 20px;
 }
-
-.page p {
-  padding: 10px;
-}
-
-.box {
-  width: 300px;
-  padding: 20px;
-  border: 1px solid black;
-}
-
-.form input {
-  height: 30px;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.form button {
-  height: 30px;
-  width: 100%;
-  margin-top: 10px;
-  border: 1px solid black;
-}

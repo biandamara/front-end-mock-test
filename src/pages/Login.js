@@ -50,28 +50,38 @@ function Login() {
           <h1>Login</h1>
           {/* title - end */}
 
-          {/* form login - start */}
-          <div className={`${styles.box}`}>
-            <div className={`${styles.form}`}>
+          <div class="card">
+            {/* form login - start */}
+            <div class="card-body">
               <form>
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="E-mail"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
+                <div class="mb-3">
+                  <input
+                    className="form-control"
+                    id="exampleInputEmail1"
+                    type="email"
+                    placeholder="E-mail"
+                    aria-describedby="emailHelp"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <input
+                    class="form-control"
+                    id="exampleInputPassword1"
+                    type="password"
+                    placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                </div>
               </form>
-              <form>
-                <input
-                  id="password"
-                  type="password"
-                  placeholder="Password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-              </form>
-              <button type="button" onClick={handleSubmit}>
+              <button
+                class="btn btn-primary"
+                type="button"
+                onClick={handleSubmit}
+              >
                 Login
               </button>
             </div>

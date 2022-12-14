@@ -8,8 +8,7 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 
-// impot styles
-import "bootstrap/dist/css/bootstrap.min.css";
+// impot file css
 import "./assets/styles/Global.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
